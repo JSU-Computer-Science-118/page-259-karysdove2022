@@ -12,27 +12,31 @@ int main () {
     
     double a, b, c, x1, x2, discriminant;
     
-    cout<< "Enter the coefficients a, b and c: ";
+    cout<< "Enter the coefficient a: ";
     cin>> a;
+    cout<< "Enter the coefficient b: ";
     cin>> b;
+    cout<< "Enter the coefficient c: ";
     cin>> c;
     
     discriminant = pow(b,2) - 4*a*c;
     
-    if (discriminant == 0) {
-        cout<< "The equation has a single root";
+    if (discriminant < 0) {
+        cout<< "Complex Roots";
+    }
+    else if (discriminant == 0) {
         x1 = -b/(2*a);
-        cout<< "x1 = " << x1 << endl;
+        cout<< "The Single root is" << x1 << endl;
     }
     else if (discriminant > 0) {
         x1 = (-b + sqrt(discriminant))/ 2*a;
         x2 = (-b - sqrt(discriminant))/ 2*a;
-        cout<< "The equation has two real roots";
-        cout<< "x1 = " << x1 << endl;
-        cout<< "x2 = " << x2 << endl;
+        cout<< "Two Real Roots \n";
+        cout<< "Root1 = " << x1 << endl;
+        cout<< "Root2 = " << x2 << endl;
     }
-    else {
-        cout<< "The equation has two complex roots ";
+    if (a==0) {
+        cout<< "Invalid Entry";
     }
     
     return 0;
