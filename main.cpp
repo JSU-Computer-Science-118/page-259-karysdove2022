@@ -21,9 +21,9 @@ int main () {
    if (discriminant > 0) {
         x1 = (-b + sqrt(discriminant))/ 2*a;
         x2 = (-b - sqrt(discriminant))/ 2*a;
-        cout<< "Two Real Roots \n";
-        cout<< "First Root = " << x1 << endl;
-        cout<< "Second Root = " << x2 << endl;
+        cout<< "Two Real Roots ";
+        cout<< "-First Root " << x1 << endl;
+        cout<< "-Second Root " << x2 << endl;
     }
     
     else if (discriminant < 0) {
